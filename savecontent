@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * lưu nội dung của ckeditor vào trong mysql
+ *
+ * @param string $data nội dung của ckeditor muốn mã hoá
+ */
+  function dataready($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+    return $data;
+  }
+  
+  
+  /**
+ * ví dụ sử dụng chức năng mã hoá
+ *
+ * @param string $_POST['editor']
+ */
+ 
+  dataready($_POST['editor']);
+  
+  /**
+ * ví dụ hiển thị nội dung đã được thêm vào từ ckeditor
+ *
+ * @param string $article_text
+ */
+ 
+  html_entity_decode($article_text);
+  
+}
+
+
+
